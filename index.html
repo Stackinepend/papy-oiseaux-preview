@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Papy Oiseaux — Le kit nichoir avec le dessin de ton enfant gravé dedans | Ulule</title>
+<meta name="description" content="Un papy passionné d'oiseaux. Sa petite-fille qui voulait créer de ses mains. Et un kit nichoir en bois où le vrai dessin de ton enfant est gravé au laser.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ========================================
+   CSS RESET + CUSTOM PROPERTIES
+   ======================================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --ulule-green: #1dba95;
+  --ulule-green-dark: #15956f;
+  --ulule-green-light: #e6f9f4;
+  --ulule-orange: #ff6b35;
+  --ulule-blue: #18a5d6;
+  --bg-page: #f7f8fa;
+  --bg-white: #ffffff;
+  --text-primary: #232221;
+  --text-secondary: #6b6b6b;
+  --text-light: #999;
+  --border-color: #e3ddd3;
+  --wood-dark: #1a1208;
+  --wood-warm: #2a1f0a;
+  --papy-green: #2d5016;
+  --papy-green-dark: #1e3a0e;
+  --font-sans: 'Nunito', -apple-system, sans-serif;
+  --font-serif: 'Lora', Georgia, serif;
+  --max-width: 1200px;
+  --sidebar-width: 380px;
+  --header-height: 60px;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow-card: 0 4px 24px rgba(0,0,0,0.08);
+  --shadow-hover: 0 4px 12px rgba(0,0,0,0.12);
+}
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg-page);
+  font-family: var(--font-sans);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+button { font-family: inherit; cursor: pointer; border: none; }
+h1, h2, h3 { line-height: 1.3; }
+hr { border: none; border-top: 1px solid var(--border-color); margin: 40px 0; }
+
+/* ========================================
+   UTILITIES
+   ======================================== */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+.placeholder-img {
+  background: radial-gradient(ellipse at center, var(--wood-warm) 0%, var(--wood-dark) 100%);
+  border-radius: var(--radius);
+  display: flex; align-items: center; justify-content: center; flex-direction: column;
+  color: rgba(255,255,255,0.7); gap: 12px; overflow: hidden;
+}
+.placeholder-img .emoji { font-size: 3rem; }
+.placeholder-img .label {
+  text-transform: uppercase; font-size: 0.65rem; letter-spacing: 2px;
+  color: rgba(255,255,255,0.5); text-align: center; padding: 0 16px;
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  height: var(--header-height);
+  background: var(--bg-white);
+  border-bottom: 1px solid var(--border-color);
+}
+.header-inner {
+  max-width: var(--max-width); margin: 0 auto; padding: 0 24px;
+  height: 100%; display: flex; align-items: center; justify-content: space-between;
+}
+.header-left { display: flex; align-items: center; gap: 8px; }
+.header-logo-owl { width: 36px; height: 36px; }
+.header-logo-text {
+  font-size: 1.4rem; font-weight: 800; color: var(--text-primary);
+  letter-spacing: -0.5px;
+}
+.header-nav { display: flex; gap: 24px; align-items: center; }
+.header-nav a {
+  font-size: 0.85rem; font-weight: 600; color: var(--text-primary);
+  transition: color 0.2s;
+}
+.header-nav a:hover { color: var(--ulule-green); }
+.header-right { display: flex; align-items: center; gap: 16px; }
+.header-search {
+  width: 32px; height: 32px; display: flex; align-items: center; justify-content: center;
+  color: var(--text-secondary); cursor: pointer;
+}
+.btn-login {
+  display: flex; align-items: center; gap: 6px;
+  padding: 8px 16px; border-radius: 20px;
+  border: 1px solid var(--border-color);
+  background: transparent; font-size: 0.85rem; font-weight: 600;
+  color: var(--text-primary); transition: border-color 0.2s;
+}
+.btn-login:hover { border-color: var(--text-primary); }
+.btn-login svg { width: 18px; height: 18px; }
+
+/* ========================================
+   HERO
+   ======================================== */
+.hero {
+  background: linear-gradient(135deg, var(--papy-green) 0%, var(--papy-green-dark) 100%);
+  padding: 48px 0 40px;
+}
+.hero-content {
+  max-width: var(--max-width); margin: 0 auto; padding: 0 24px;
+  display: flex; gap: 40px; align-items: flex-start;
+}
+.hero-left { flex: 1; min-width: 0; }
+.hero-title {
+  color: #fff; font-size: 2rem; font-weight: 800; margin-bottom: 12px;
+}
+.hero-subtitle {
+  color: rgba(255,255,255,0.85); font-size: 1.05rem; line-height: 1.7;
+  margin-bottom: 24px; max-width: 600px;
+}
+.hero-video {
+  aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden;
+  position: relative; cursor: pointer; margin-bottom: 20px;
+}
+.hero-video .placeholder-img { width: 100%; height: 100%; }
+.hero-video .play-btn {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  width: 72px; height: 72px; background: rgba(24,165,214,0.9); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  transition: transform 0.2s;
+}
+.hero-video:hover .play-btn { transform: translate(-50%,-50%) scale(1.1); }
+.play-btn svg { width: 24px; height: 24px; fill: #fff; margin-left: 3px; }
+.hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.hero-tag {
+  background: rgba(255,255,255,0.15); color: #fff;
+  padding: 5px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;
+}
+.hero-creator {
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.15);
+}
+.hero-avatars { display: flex; gap: -4px; }
+.hero-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; margin-right: -6px; border: 2px solid var(--papy-green);
+}
+.hero-creator-info { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.hero-creator-name { color: #fff; font-weight: 700; font-size: 0.95rem; }
+.hero-creator-meta {
+  display: flex; align-items: center; gap: 4px;
+  color: rgba(255,255,255,0.7); font-size: 0.8rem;
+}
+.hero-creator-meta svg { width: 13px; height: 13px; fill: currentColor; }
+
+/* ========================================
+   HERO SIDEBAR
+   ======================================== */
+.hero-sidebar {
+  width: var(--sidebar-width); flex-shrink: 0;
+  background: var(--bg-white); border-radius: 16px;
+  padding: 28px; box-shadow: var(--shadow-card);
+}
+.sidebar-egg { margin-bottom: 16px; }
+.sidebar-egg svg { width: 48px; height: 48px; }
+.amount-raised {
+  font-size: 2.2rem; font-weight: 800; color: var(--text-primary);
+  margin-bottom: 4px;
+}
+.amount-goal { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 4px; }
+.funded-badge {
+  display: inline-block; font-size: 0.8rem; font-weight: 700;
+  color: var(--ulule-green); margin-bottom: 16px;
+}
+.progress-bar {
+  height: 8px; background: #e8e8e8; border-radius: 4px;
+  overflow: hidden; margin-bottom: 20px;
+}
+.progress-fill {
+  height: 100%; width: 0%;
+  background: linear-gradient(90deg, var(--ulule-green), #2ee0ab);
+  border-radius: 4px; transition: width 1s ease-out;
+}
+.stats-row { display: flex; gap: 24px; margin-bottom: 24px; }
+.stat-item { display: flex; align-items: center; gap: 8px; }
+.stat-number { font-size: 1.1rem; font-weight: 700; }
+.stat-label { font-size: 0.8rem; color: var(--text-secondary); }
+.stat-icon { width: 28px; height: 28px; border-radius: 50%; background: var(--ulule-green-light); display: flex; align-items: center; justify-content: center; }
+.stat-icon svg { width: 14px; height: 14px; fill: var(--ulule-green); }
+.cta-contribute {
+  width: 100%; padding: 14px 24px; background: var(--ulule-green);
+  color: #fff; border-radius: var(--radius-sm); font-size: 1.1rem;
+  font-weight: 700; transition: background 0.2s; margin-bottom: 4px;
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+}
+.cta-contribute:hover { background: var(--ulule-green-dark); }
+.cta-contribute small { font-size: 0.8rem; font-weight: 400; opacity: 0.9; }
+.cta-secure {
+  text-align: center; font-size: 0.75rem; color: var(--text-secondary);
+  margin-bottom: 16px; cursor: pointer;
+}
+.cta-secure:hover { text-decoration: underline; }
+.sidebar-actions { display: flex; gap: 12px; }
+.btn-outline {
+  flex: 1; padding: 10px; border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm); background: transparent;
+  font-size: 0.85rem; font-weight: 600; color: var(--text-primary);
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  transition: border-color 0.2s;
+}
+.btn-outline:hover { border-color: var(--text-primary); }
+.btn-outline svg { width: 17px; height: 17px; fill: currentColor; }
+
+/* ========================================
+   STICKY MENU
+   ======================================== */
+.sticky-menu {
+  position: sticky; top: var(--header-height); z-index: 90;
+  background: var(--bg-white); border-bottom: 1px solid var(--border-color);
+}
+.sticky-menu-inner {
+  max-width: var(--max-width); margin: 0 auto; padding: 0 24px;
+  display: flex; gap: 0; overflow-x: auto; -webkit-overflow-scrolling: touch;
+}
+.sticky-menu-inner::-webkit-scrollbar { display: none; }
+.sticky-menu a {
+  display: flex; align-items: center; gap: 6px;
+  padding: 14px 16px; font-size: 0.85rem; font-weight: 600;
+  color: var(--text-secondary); white-space: nowrap;
+  border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s;
+}
+.sticky-menu a:hover { color: var(--text-primary); }
+.sticky-menu a.active {
+  color: var(--text-primary); border-bottom-color: var(--ulule-green);
+}
+.menu-badge {
+  background: var(--ulule-green); color: #fff;
+  border-radius: 10px; padding: 1px 7px; font-size: 0.7rem; font-weight: 700;
+}
+
+/* ========================================
+   MAIN CONTENT GRID
+   ======================================== */
+.content-main {
+  max-width: var(--max-width); margin: 0 auto; padding: 40px 24px;
+  display: grid; grid-template-columns: 1fr var(--sidebar-width); gap: 48px;
+}
+.content-left { min-width: 0; }
+
+/* ========================================
+   CONTENT SECTIONS
+   ======================================== */
+.section-title {
+  font-size: 1.4rem; font-weight: 800; margin-bottom: 24px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border-color);
+}
+.section-block { margin-bottom: 48px; }
+.section-block h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; }
+.section-block p { margin-bottom: 16px; color: var(--text-primary); line-height: 1.75; }
+.section-block p strong { font-weight: 700; }
+
+/* Citation */
+.citation {
+  background: radial-gradient(ellipse at 30% 50%, var(--wood-warm), var(--wood-dark));
+  color: rgba(255,255,255,0.92); padding: 32px;
+  border-radius: var(--radius); border-left: 4px solid var(--ulule-green);
+  font-family: var(--font-serif); font-style: italic;
+  line-height: 1.9; margin: 24px 0; font-size: 1rem;
+}
+.citation p { color: rgba(255,255,255,0.92); margin-bottom: 12px; }
+.citation p:last-child { margin-bottom: 0; }
+
+/* Product list */
+.product-list { list-style: none; margin: 24px 0; }
+.product-item {
+  display: flex; gap: 14px; margin-bottom: 18px;
+  padding: 16px; background: var(--bg-white);
+  border: 1px solid var(--border-color); border-radius: var(--radius-sm);
+}
+.product-item .emoji { font-size: 1.6rem; flex-shrink: 0; line-height: 1; }
+.product-item .text { font-size: 0.95rem; line-height: 1.6; }
+.product-item .text strong { display: block; margin-bottom: 2px; }
+
+/* Placeholder grid */
+.placeholder-grid {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin: 24px 0;
+}
+.placeholder-grid .placeholder-img { aspect-ratio: 1; }
+
+/* ========================================
+   ACCORDIONS (CSS-only)
+   ======================================== */
+.accordion { border: 1px solid var(--border-color); border-radius: var(--radius); margin-bottom: 16px; overflow: hidden; }
+.accordion input[type="checkbox"] { display: none; }
+.accordion label {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 24px; cursor: pointer; font-weight: 700; font-size: 1.1rem;
+  background: var(--bg-white); transition: background 0.2s;
+}
+.accordion label:hover { background: var(--bg-page); }
+.accordion .chevron {
+  width: 20px; height: 20px; transition: transform 0.3s;
+  fill: var(--text-secondary);
+}
+.accordion input:checked ~ label .chevron { transform: rotate(180deg); }
+.accordion-content {
+  max-height: 0; overflow: hidden; transition: max-height 0.4s ease;
+  padding: 0 24px;
+}
+.accordion input:checked ~ .accordion-content {
+  max-height: 2000px; padding: 0 24px 24px;
+}
+.accordion-content p { margin-bottom: 12px; line-height: 1.75; }
+
+/* Team */
+.team-grid { display: flex; flex-direction: column; gap: 20px; margin-top: 20px; }
+.team-member { display: flex; gap: 16px; align-items: flex-start; }
+.team-member .avatar {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--ulule-green-light); display: flex; align-items: center; justify-content: center;
+  font-size: 1.6rem; flex-shrink: 0;
+}
+.team-member .info h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 2px; }
+.team-member .info p { font-size: 0.85rem; color: var(--text-secondary); margin: 0; }
+
+/* FAQ */
+.faq-item { border-bottom: 1px solid var(--border-color); }
+.faq-item:last-child { border-bottom: none; }
+.faq-item input[type="checkbox"] { display: none; }
+.faq-item label {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 0; cursor: pointer; font-weight: 600; font-size: 0.95rem;
+}
+.faq-item .chevron { width: 16px; height: 16px; transition: transform 0.3s; fill: var(--text-secondary); }
+.faq-item input:checked ~ label .chevron { transform: rotate(180deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+.faq-item input:checked ~ .faq-answer { max-height: 500px; }
+.faq-answer p { padding-bottom: 16px; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; }
+
+/* News */
+.news-item {
+  padding: 24px; background: var(--bg-white);
+  border: 1px solid var(--border-color); border-radius: var(--radius);
+  margin-bottom: 16px;
+}
+.news-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.news-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--border-color); display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+}
+.news-meta { font-size: 0.8rem; color: var(--text-light); }
+.news-title { font-weight: 700; margin-bottom: 8px; }
+.news-body { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; }
+
+/* Social links */
+.social-section { margin-top: 40px; }
+.social-section h3 { font-size: 1rem; font-weight: 700; margin-bottom: 16px; }
+.social-links { display: flex; flex-direction: column; gap: 12px; }
+.social-link {
+  display: flex; align-items: center; gap: 12px; padding: 12px 16px;
+  border: 1px solid var(--border-color); border-radius: var(--radius-sm);
+  font-weight: 600; font-size: 0.9rem; transition: border-color 0.2s;
+}
+.social-link:hover { border-color: var(--text-secondary); }
+.social-icon {
+  width: 40px; height: 40px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 1rem; flex-shrink: 0;
+}
+
+/* ========================================
+   SIDEBAR REWARDS
+   ======================================== */
+.content-sidebar { align-self: start; }
+.sidebar-sticky { position: sticky; top: calc(var(--header-height) + 60px); }
+.rewards-header { margin-bottom: 16px; }
+.rewards-header h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: 4px; }
+.rewards-header p { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 16px; }
+.reward-card {
+  border: 1px solid var(--border-color); border-radius: var(--radius);
+  padding: 20px; margin-bottom: 14px; background: var(--bg-white);
+  transition: border-color 0.2s, box-shadow 0.2s; cursor: pointer;
+}
+.reward-card:hover {
+  border-color: var(--ulule-green); box-shadow: var(--shadow-hover);
+}
+.reward-price { font-size: 0.85rem; font-weight: 600; color: var(--ulule-green); margin-bottom: 4px; }
+.reward-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
+.reward-popular {
+  display: inline-block; font-size: 0.7rem; font-weight: 700;
+  background: var(--ulule-orange); color: #fff;
+  padding: 2px 8px; border-radius: 4px; margin-bottom: 8px;
+}
+.reward-limited {
+  display: inline-block; font-size: 0.7rem; font-weight: 700;
+  background: var(--ulule-green-light); color: var(--ulule-green);
+  padding: 2px 8px; border-radius: 4px; margin-bottom: 8px;
+}
+.reward-desc {
+  font-size: 0.83rem; color: var(--text-secondary); line-height: 1.6;
+  margin-bottom: 12px;
+}
+.reward-cta {
+  width: 100%; padding: 10px; background: var(--bg-white);
+  border: 2px solid var(--ulule-green); border-radius: var(--radius-sm);
+  color: var(--ulule-green); font-weight: 700; font-size: 0.9rem;
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.reward-cta:hover { background: var(--ulule-green); color: #fff; }
+.reward-footer {
+  display: flex; align-items: center; gap: 16px; margin-top: 12px;
+  font-size: 0.75rem; color: var(--text-light);
+}
+.reward-footer span { display: flex; align-items: center; gap: 4px; }
+.reward-footer svg { width: 12px; height: 12px; fill: currentColor; }
+
+/* Donation box */
+.donation-box { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border-color); }
+.donation-box h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; }
+.donation-form { display: flex; gap: 8px; }
+.donation-input {
+  flex: 1; padding: 10px 14px; border: 2px solid var(--border-color);
+  border-radius: var(--radius-sm); font-size: 0.9rem; font-family: inherit;
+  transition: border-color 0.2s;
+}
+.donation-input:focus { outline: none; border-color: var(--ulule-green); }
+.donation-btn {
+  padding: 10px 20px; background: var(--ulule-green); color: #fff;
+  border-radius: var(--radius-sm); font-weight: 700; font-size: 0.9rem;
+  white-space: nowrap; transition: background 0.2s;
+}
+.donation-btn:hover { background: var(--ulule-green-dark); }
+
+/* Delivery info */
+.delivery-info { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border-color); font-size: 0.8rem; color: var(--text-secondary); }
+.delivery-info h4 { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; color: var(--text-light); }
+.delivery-info p { margin-bottom: 4px; }
+
+/* ========================================
+   CONTRIBUTIONS RECENTES
+   ======================================== */
+.contributions-section { margin: 48px auto; max-width: var(--max-width); padding: 0 24px; }
+.contributions-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: 20px; }
+.contribution-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 0; border-bottom: 1px solid var(--border-color);
+}
+.contribution-item:last-child { border-bottom: none; }
+.contrib-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--ulule-green-light); display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; flex-shrink: 0;
+}
+.contrib-info { flex: 1; }
+.contrib-name { font-weight: 700; font-size: 0.9rem; }
+.contrib-reward { font-size: 0.8rem; color: var(--text-secondary); }
+.contrib-reward a { color: var(--ulule-green); }
+.contrib-time { font-size: 0.75rem; color: var(--text-light); }
+
+/* ========================================
+   HOW IT WORKS
+   ======================================== */
+.how-it-works {
+  background: var(--bg-white); padding: 64px 24px;
+  border-top: 1px solid var(--border-color);
+}
+.how-it-works .container { text-align: center; }
+.how-it-works h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 48px; }
+.how-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 40px; text-align: center; max-width: 900px; margin: 0 auto 40px; }
+.how-item .icon-circle {
+  width: 100px; height: 100px; border-radius: 50%;
+  background: var(--bg-page); margin: 0 auto 20px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.5rem;
+}
+.how-item h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+.how-item p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
+.how-cta {
+  display: inline-block; padding: 14px 40px;
+  background: var(--ulule-green); color: #fff;
+  border-radius: var(--radius-sm); font-size: 1.1rem; font-weight: 700;
+  transition: background 0.2s; border: none; cursor: pointer;
+}
+.how-cta:hover { background: var(--ulule-green-dark); }
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.site-footer {
+  background: var(--bg-white); border-top: 1px solid var(--border-color);
+  padding: 48px 24px 32px;
+}
+.footer-grid {
+  max-width: var(--max-width); margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 32px;
+  margin-bottom: 40px;
+}
+.footer-col h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 16px; }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 8px; }
+.footer-col a { font-size: 0.8rem; color: var(--text-secondary); transition: color 0.2s; }
+.footer-col a:hover { color: var(--text-primary); }
+.footer-bottom {
+  max-width: var(--max-width); margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 24px; border-top: 1px solid var(--border-color);
+  flex-wrap: wrap; gap: 16px;
+}
+.footer-logo { font-size: 1.2rem; font-weight: 800; color: var(--text-primary); }
+.footer-social { display: flex; gap: 12px; }
+.footer-social a {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--text-primary); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.7rem; transition: opacity 0.2s;
+}
+.footer-social a:hover { opacity: 0.7; }
+.footer-legal { display: flex; gap: 16px; flex-wrap: wrap; }
+.footer-legal a { font-size: 0.75rem; color: var(--text-light); }
+.footer-legal a:hover { color: var(--text-primary); }
+.footer-disclaimer {
+  max-width: var(--max-width); margin: 24px auto 0;
+  text-align: center; padding: 16px;
+  background: #fff3cd; border-radius: var(--radius-sm);
+  font-size: 0.8rem; color: #856404; font-weight: 600;
+}
+
+/* ========================================
+   TAB CONTENT visibility
+   ======================================== */
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 1024px) {
+  .content-main { grid-template-columns: 1fr 320px; gap: 32px; }
+  .hero-sidebar { width: 340px; }
+}
+@media (max-width: 768px) {
+  .header-nav { display: none; }
+  .hero-content { flex-direction: column; }
+  .hero-sidebar { width: 100%; }
+  .hero-title { font-size: 1.5rem; }
+  .content-main { grid-template-columns: 1fr; }
+  .content-sidebar { order: -1; }
+  .sidebar-sticky { position: static; }
+  .footer-grid { grid-template-columns: repeat(2,1fr); }
+  .how-grid { grid-template-columns: 1fr; max-width: 400px; }
+  .placeholder-grid { grid-template-columns: 1fr; }
+  .section-title { font-size: 1.2rem; }
+  .stats-row { flex-direction: column; gap: 12px; }
+}
+@media (max-width: 480px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .hero-creator { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-left">
+      <svg class="header-logo-owl" viewBox="0 0 170 159" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#232221" d="M164.333 11.509c-3.632-1.846-8.259-.828-10.718 2.472a304.917 304.917 0 0 0-7.052 9.879c-.815 1.175-1.285 1.096-2.313.201-2.794-2.472-5.655-4.911-8.65-7.126C122.804 7.537 108.834 1.06 92.696.075c-5.722-.358-11.332.649-16.987 1.22C60.421 2.816 46.496 7.772 34.571 17.74c-2.067 1.734-3.755 3.67-4.303 6.41-.458 2.361 1.14 3.67 2.76 4.688 1.443.884 2.996.582 4.236-.805 8.349-9.32 18.865-14.97 30.89-17.833 13.053-3.1 26.096-3.603 38.914 1.23 10.137 3.827 19.245 9.745 28.923 14.51.514.258.928.75 1.375 1.13 3.364 2.842 6.403 6.02 9.689 9.264 1.934-5.37 5.756-9.275 8.74-13.716.994-1.5 2.078-2.931 3.151-4.385.425-.582 1.039-.84 1.777-.705.693.134.671.637.659 1.208-.201 6.064.615 12.082.95 18.113.559 9.554.414 19.141.906 28.684.637 12.262-.459 24.266-4.828 35.823-11.947 31.593-42.848 51.675-76.632 49.885-39.462-2.07-70.732-34.077-71.727-73.58-.402-16.144-.525-32.288-.782-48.834 3.308 2.853 6.191 5.594 9.578 7.652 1.352.828 3.017 2.104 4.515.772 1.509-1.342.38-3.087-.28-4.553-2.123-4.766-6.023-8.167-9.454-11.892-2.772-2.999-5.834-3.804-9.064-2.484-3.04 1.253-4.66 4.072-4.56 8.044.37 15.092.95 30.195 1.073 45.31.134 14.655 2.548 28.662 9.51 41.628.291.168.57.414.739.828 3.129 7.854 9.085 13.805 14.54 20.048 27.503 27.779 71.457 33.059 104.459 11.68 26.006-16.849 39.428-41.271 39.652-72.294.111-16.065-.135-32.153-1.677-48.162-.257-2.663-.067-5.393-.134-8.078-.078-2.752-1.497-4.62-3.889-5.84l.056.023Z"/>
+        <path fill="#232221" d="M136.561 71.698c-.435-4.631-2.156-8.67-5.867-11.702-1.307-.985-2.57-2.07-3.956-2.92a18.177 18.177 0 0 0-5.443-2.237c.425.28.827.604 1.23.917 1.274 1.04 1.866 2.428 2.011 4.016.291 3.1-.894 5.527-3.531 7.116-1.453.883-3.107 1.23-4.772.324-.503-.325-1.218-.414-1.252-1.208-.011-.202-.235-.168-.358-.246-3.565-2.271-4.034-7.474-.916-10.326.425-.38.883-.683 1.375-.93a17.862 17.862 0 0 0-10.036 4.588c-9.086 8.312-7.734 23.449 2.66 30.072.357.212.994.134 1.028.716.1 2.327 2.168 2.584 3.632 3.468v.045c4.817 2.64 9.633 1.61 13.88-.951 7.678-4.654 11.131-11.725 10.293-20.73l.022-.012Z"/>
+        <path fill="#E40C4D" d="M112.388 93.346c7.488 2.025 13.88.068 18.798-5.817 5.174-6.187 6.258-13.269 3.554-20.876-.872-2.506-2.481-4.587-4.046-6.69 6.56 4.251 9.097 10.516 8.717 18.045-.525 10.796-9.823 19.366-19.882 18.426-2.637-.246-5.386-.638-7.141-3.088Z"/>
+        <path fill="#45AFDE" d="M45.937 91.77c4.772 1.588 9.522 1.957 14.115-.538 6.09-3.3 9.197-8.558 9.812-15.36.022-.291-.246-.705-.112-.85 3.398-4.062.615-7.407-1.207-10.875-.38-.727-.916-1.342-1.397-2.003 4.806 2.775 7.086 7.071 7.466 12.486.022.447.067 1.107-.179 1.297-1.665 1.265-1.207 3.167-1.531 4.811-2.47 12.508-15.892 18.672-26.028 11.937-.37-.235-.649-.593-.973-.906l.045-.022-.011.022Z"/>
+        <path fill="#232221" d="M149.715 62.077c-9.186-12.944-21.558-19.544-37.696-18.135-9.7.828-18.73 3.502-25.838 10.673-1.118 1.119-1.442-.056-1.878-.481-5.878-5.717-12.919-9.487-20.664-11.87-9.712-2.965-18.797-.895-27.47 3.96C16.712 57.11 14.03 74.898 19.093 90.292c7.633 23.181 33.683 30.732 51.23 21.67H70.3c4.303-1.924 8.293-4.285 11.02-8.256.558-.817 1.564-1.857.681-2.786-.693-.716-1.676.246-2.414.638-5.007 2.73-10.393 4.352-15.937 5.415-18.104 3.434-39.93-9.185-37.572-33.73 1.318-13.795 16.406-23.35 26.24-24.177 10.695-.917 19.234 3.994 27.124 10.471 1.352 1.108 1.643 1.925.603 3.625-5.599 9.185-4.291 18.616 3.409 25.9 1.833 1.733 3.71 1.946 5.387.413 5.163-4.754 7.577-10.505 6.08-17.575-.738-3.502-2.348-6.635-4.147-9.666-1.855-3.1-2.09-3.278.872-5.482 11.544-8.592 24.285-10.472 37.561-5.09 8.103 3.277 14.63 8.972 17.613 17.564 2.739 7.887 1.364 15.853-1.709 23.292-5.957 14.488-22.352 21.223-37.495 15.976-5.063-1.756-9.242-4.855-13.534-7.887-.827-.593-1.944-1.723-2.961-.683-.839.884-.135 2.171.413 3.133 1.453 2.551 3.341 4.766 5.61 6.668 13.657 11.433 35.472 9.476 47.754-4.319 7.242-8.133 9.131-18.023 9.187-28.45.022-5.347-1.252-10.471-4.381-14.857l.011-.022Zm-62.64 19.735c-.637 1.03-1.04.94-1.744.09-3.118-3.648-3.598-10.718-1.017-14.78.57-.883.917-.85 1.386-.022.525.918 1.006 1.824 1.263 2.305h-.022c2.056 4.441 2.626 8.413.145 12.407h-.011Z"/>
+        <path fill="#232221" d="M71.775 70.983c-.2-3.625-1.665-6.612-4.604-8.838a68.987 68.987 0 0 0-1.386-1.153 18.43 18.43 0 0 0-7.03-3.49c.123.09.235.19.358.28 1.274 1.04 1.867 2.427 2.012 4.016.29 3.088-.894 5.526-3.532 7.115-1.453.884-3.107 1.23-4.76.325-.503-.325-1.219-.403-1.252-1.209-.011-.201-.235-.179-.358-.246-3.576-2.27-4.034-7.473-.916-10.326.056-.045.111-.078.156-.123-6.873 1.432-12.874 6.668-14.495 14.454-1.408 6.769 1.162 15.506 9.947 19.981 5.163 3.48 14.003 2.014 19.412-3.692 4.247-4.497 4.56-10.415 6.448-15.752.146-.403 0-.895-.022-1.342h.022Z"/>
+      </svg>
+      <span class="header-logo-text">ulule</span>
+    </div>
+    <nav class="header-nav">
+      <a href="#">Lancer une collecte</a>
+      <a href="#">Formation</a>
+      <a href="#">Communaut&eacute;</a>
+    </nav>
+    <div class="header-right">
+      <div class="header-search">
+        <svg viewBox="0 0 19 19" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8.3" cy="8.3" r="6.3"/><line x1="13" y1="13" x2="17.5" y2="17.5"/></svg>
+      </div>
+      <button class="btn-login">
+        <svg viewBox="0 0 19 19" width="18" height="18" fill="currentColor"><path d="M9.5 11.28c5.58 0 8.33 2.48 8.33 6.78 0 .52-.41.94-.93.94-.51 0-.93-.42-.93-.94 0-3.22-1.88-4.92-6.48-4.92s-6.48 1.7-6.48 4.92c0 .52-.42.94-.93.94s-.93-.42-.93-.94c0-4.3 2.75-6.78 8.33-6.78ZM9.53 0c2.86 0 4.76 1.9 4.76 4.75 0 2.8-1.75 4.64-4.42 4.74l-.16.01c-.06 0-.12 0-.19 0-2.86 0-4.76-1.9-4.76-4.75S6.67 0 9.53 0Zm0 1.78c-1.87 0-2.98 1.1-2.98 2.97s1.11 2.97 2.98 2.97l.16-.01c1.78-.03 2.82-1.1 2.82-2.96 0-1.87-1.11-2.97-2.98-2.97Z"/></svg>
+        <span>Se connecter</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-left">
+      <h1 class="hero-title">Papy Oiseaux &mdash; Le kit nichoir avec le dessin de ton enfant grav&eacute; dedans</h1>
+      <p class="hero-subtitle">Un papy passionn&eacute; d'oiseaux. Sa petite-fille qui voulait cr&eacute;er de ses mains. Et un kit nichoir en bois o&ugrave; le vrai dessin de ton enfant est grav&eacute; au laser sur la fa&ccedil;ade. Fabriqu&eacute; en France, assembl&eacute; en famille.</p>
+      <div class="hero-video">
+        <div class="placeholder-img">
+          <span class="emoji">&#x1F426;</span>
+          <span class="label">Vid&eacute;o de pr&eacute;sentation</span>
+        </div>
+        <div class="play-btn">
+          <svg viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19"/></svg>
+        </div>
+      </div>
+      <div class="hero-tags">
+        <span class="hero-tag">&Eacute;cologie</span>
+        <span class="hero-tag">Famille</span>
+        <span class="hero-tag">Artisanat</span>
+        <span class="hero-tag">France</span>
+      </div>
+      <div class="hero-creator">
+        <div class="hero-avatars">
+          <div class="hero-avatar">&#x1F474;</div>
+          <div class="hero-avatar">&#x1F4BB;</div>
+          <div class="hero-avatar">&#x1F527;</div>
+          <div class="hero-avatar">&#x1F4DE;</div>
+        </div>
+        <div class="hero-creator-info">
+          <span class="hero-creator-name">Papy Oiseaux</span>
+          <span class="hero-creator-meta">
+            <svg viewBox="0 0 32 33" fill="currentColor"><path d="M13.5 0C20.956 0 27 6.006 27 13.414c0 4.51-2.401 8.884-6.346 13.02a40.897 40.897 0 01-4.21 3.825 30.81 30.81 0 01-1.952 1.442 1.799 1.799 0 01-1.984 0 30.81 30.81 0 01-1.952-1.442 40.897 40.897 0 01-4.21-3.824C2.4 22.298 0 17.923 0 13.415 0 6.004 6.044 0 13.5 0z"/></svg>
+            France
+          </span>
+          <span class="hero-creator-meta">
+            <svg viewBox="0 0 32 26" fill="currentColor"><path d="M15.57 0H1.73C.77 0 0 .77 0 1.73v13.85c0 .46.18.9.5 1.22l11.9 11.88a4.5 4.5 0 006.36 0l9.93-9.93a4.5 4.5 0 000-6.35L16.8.5c-.32-.32-.76-.5-1.22-.5z"/></svg>
+            Enfants &amp; famille
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO SIDEBAR -->
+    <div class="hero-sidebar">
+      <div class="sidebar-egg">
+        <svg viewBox="0 0 60 78" width="48" height="48"><path fill="#66dc88" d="M16.36 33.31L31.5 18.17l9.62 9.62L51.91 17.01C51.46 16.18 50.99 15.36 50.51 14.58 45.09 5.92 37.73.5 29.71.5c-.01 0-.01 0-.01 0C18.94.51 9.53 10.31 4.61 23.81L16.36 33.31z"/><path fill="#66dc88" d="M40.91 35.78L31.43 26.3 16.9 40.84 2.76 29.41C1.59 34.23.95 39.46.95 44.91c.01 8.69 2.95 17.63 8.33 23.41 5.34 5.74 12.58 8.9 20.4 8.9h.02c7.85 0 15.1-3.14 20.4-8.82 5.38-5.75 8.36-14.73 8.35-23.52 0-8.15-1.39-15.93-3.96-22.68L40.91 35.78z"/></svg>
+      </div>
+      <div class="amount-raised" id="amount-counter">0&nbsp;&euro;</div>
+      <p class="amount-goal">sur 15&nbsp;000&nbsp;&euro;</p>
+      <div class="funded-badge">Financ&eacute; &agrave; 62&nbsp;%</div>
+      <div class="progress-bar"><div class="progress-fill"></div></div>
+      <div class="stats-row">
+        <div class="stat-item">
+          <div class="stat-icon">
+            <svg viewBox="0 0 19 19" fill="currentColor"><path d="M9.5 11.28c5.58 0 8.33 2.48 8.33 6.78 0 .52-.41.94-.93.94-.51 0-.93-.42-.93-.94 0-3.22-1.88-4.92-6.48-4.92s-6.48 1.7-6.48 4.92c0 .52-.42.94-.93.94s-.93-.42-.93-.94c0-4.3 2.75-6.78 8.33-6.78Z"/></svg>
+          </div>
+          <div>
+            <div class="stat-number">187</div>
+            <div class="stat-label">contributions</div>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon">
+            <svg viewBox="0 0 32 32" fill="currentColor"><path d="M21 0c.83 0 1.5.65 1.5 1.45V2.91l3 0c2.49 0 4.5 1.95 4.5 4.36v20.36C30 30.05 27.99 32 25.5 32h-21C2.01 32 0 30.05 0 27.64V7.27c0-2.41 2.01-4.36 4.5-4.36l3 0V1.45C7.5.7 8.09.08 8.86.01L9 0c.83 0 1.5.65 1.5 1.45V2.91h9V1.45c0-.76.59-1.38 1.36-1.45z"/></svg>
+          </div>
+          <div>
+            <div class="stat-number">14</div>
+            <div class="stat-label">jours restants</div>
+          </div>
+        </div>
+      </div>
+      <button class="cta-contribute" id="cta-main">
+        <span>Contribuer</span>
+        <small>&Agrave; partir de 1&nbsp;&euro;</small>
+      </button>
+      <p class="cta-secure">Paiement s&eacute;curis&eacute; et sans engagement</p>
+      <div class="sidebar-actions">
+        <button class="btn-outline">
+          <svg viewBox="0 0 32 32"><path d="M21 0c3 0 6 3 6 6s-3 5-6 5l-3-1-7 4a6 6 0 010 2l7 4 3-1c3 0 6 2 6 5s-3 6-6 6a6 6 0 01-5-7l-7-4-3 2c-3 0-6-3-6-6s3-6 6-6l3 2 7-4V6c0-3 2-6 5-6z"/></svg>
+          Partager
+        </button>
+        <button class="btn-outline">
+          <svg viewBox="0 0 32 32"><path d="M16 30a1.63 1.63 0 01-1.2-.49L2.71 17.57a9 9 0 010-12.87 9.34 9.34 0 0113.07 0L16 4.9l.24-.22a9.3 9.3 0 0113 0l.05 0a9.06 9.06 0 010 12.89L17.21 29.51A1.78 1.78 0 0116 30Z"/></svg>
+          Suivre
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STICKY MENU ============ -->
+<nav class="sticky-menu">
+  <div class="sticky-menu-inner">
+    <a href="#section-collecte" class="active" data-target="section-collecte">Collecte</a>
+    <a href="#section-rewards" data-target="section-rewards">Contreparties</a>
+    <a href="#section-faq" data-target="section-faq">FAQ</a>
+    <a href="#section-news" data-target="section-news">Actualit&eacute;s <span class="menu-badge">2</span></a>
+    <a href="#section-contributions" data-target="section-contributions">Contributions <span class="menu-badge">187</span></a>
+  </div>
+</nav>
+
+<!-- ============ MAIN CONTENT ============ -->
+<div class="content-main">
+  <div class="content-left">
+
+    <!-- TAB: Collecte -->
+    <div id="section-collecte" class="tab-content active">
+
+      <h2 class="section-title">&Agrave; propos de cette collecte</h2>
+
+      <!-- Citation fondatrice -->
+      <div class="section-block">
+        <h3>Le jour o&ugrave; tout a commenc&eacute;</h3>
+        <blockquote class="citation">
+          <p>&laquo;&nbsp;Mon papy adore les oiseaux. Un samedi matin, ma petite-fille m'a tir&eacute; par la manche&nbsp;: &ldquo;Papy, on construit une maison pour les oiseaux du jardin&nbsp;?&rdquo;</p>
+          <p>On a pass&eacute; la journ&eacute;e enti&egrave;re dans l'atelier. La sciure dans les cheveux. Le bruit de la ponceuse. Son petit dessin d'oiseau scotch&eacute; sur le bois comme mod&egrave;le.</p>
+          <p>Le soir, on a pos&eacute; la niche ensemble sur le muret du fond. Elle a dit&nbsp;: &ldquo;Papy, c'est la plus belle maison du monde.&rdquo;</p>
+          <p>Elle avait raison. Pas parce qu'elle &eacute;tait parfaite. Parce qu'elle &eacute;tait &agrave; nous.&nbsp;&raquo;</p>
+        </blockquote>
+        <div class="placeholder-img" style="aspect-ratio:16/9;margin:24px 0;">
+          <span class="emoji">&#x1F474;&#x1F467;</span>
+          <span class="label">Photo &mdash; Le papy et sa petite-fille dans l'atelier</span>
+        </div>
+      </div>
+
+      <!-- Le produit -->
+      <div class="section-block">
+        <h3>Le produit</h3>
+        <p>Ce jour-l&agrave;, on s'est dit&nbsp;: et si chaque famille pouvait vivre ce moment&nbsp;?</p>
+        <p>Pas un jouet en plastique qu'on oublie. Pas un kit Ikea sans &acirc;me. Un vrai projet &agrave; construire ensemble, avec les mains, avec le c&oelig;ur &mdash; et avec le dessin de ton enfant grav&eacute; dessus pour toujours.</p>
+
+        <ul class="product-list">
+          <li class="product-item">
+            <span class="emoji">&#x1F3E0;</span>
+            <div class="text"><strong>Kit nichoir en bois de peuplier</strong> Planches pr&eacute;d&eacute;coup&eacute;es, assemblage sans outil, sans colle. Con&ccedil;u pour que m&ecirc;me les plus petits participent.</div>
+          </li>
+          <li class="product-item">
+            <span class="emoji">&#x270F;&#xFE0F;</span>
+            <div class="text"><strong>Planche avant grav&eacute;e au laser</strong> Avec LE vrai dessin de ton enfant. Fait main sur papier, photographi&eacute;, grav&eacute; dans le bois. Unique au monde.</div>
+          </li>
+          <li class="product-item">
+            <span class="emoji">&#x1F3D4;&#xFE0F;</span>
+            <div class="text"><strong>Toiture interchangeable par aimants</strong> Chalet, japonais, chaumi&egrave;re&hellip; Facile m&ecirc;me pour les plus petits. Change de toit, change de saison.</div>
+          </li>
+          <li class="product-item">
+            <span class="emoji">&#x1F4CC;</span>
+            <div class="text"><strong>Pins oiseaux &agrave; collectionner</strong> 3 esp&egrave;ces dans chaque box. Le d&eacute;but d'une collection nature.</div>
+          </li>
+          <li class="product-item">
+            <span class="emoji">&#x1F3A8;</span>
+            <div class="text"><strong>Autocollants Papy Oiseaux</strong> Pour d&eacute;corer, personnaliser, s'amuser.</div>
+          </li>
+        </ul>
+
+        <div class="placeholder-grid">
+          <div class="placeholder-img"><span class="emoji">&#x1F3E0;</span><span class="label">Le kit</span></div>
+          <div class="placeholder-img"><span class="emoji">&#x270F;&#xFE0F;</span><span class="label">La gravure</span></div>
+          <div class="placeholder-img"><span class="emoji">&#x1F3D4;&#xFE0F;</span><span class="label">Les toitures</span></div>
+        </div>
+      </div>
+
+      <!-- La magie -->
+      <div class="section-block">
+        <h3>La magie&nbsp;: le dessin grav&eacute;</h3>
+        <p>C'est l&agrave; que &ccedil;a devient unique.</p>
+        <p>Ton enfant dessine un oiseau sur papier. N'importe quel oiseau &mdash; un griffonnage de 3 ans ou un chef-d'&oelig;uvre de 8 ans. Tu prends une photo. Tu l'uploades sur notre configurateur.</p>
+        <p>Et l&agrave;, tu vois le dessin appara&icirc;tre en temps r&eacute;el sur le bois. La simulation montre exactement ce que la gravure laser va produire. Les traits du crayon deviennent des sillons dans le peuplier.</p>
+        <p>Personne ne fait &ccedil;a. Personne ne grave le vrai dessin de ton enfant sur un nichoir. C'est pas un sticker. C'est pas un transfert. C'est grav&eacute; dans le bois, pour toujours.</p>
+        <p>Dans 20 ans, quand ton enfant reviendra dans le jardin de ses grands-parents, le nichoir sera toujours l&agrave;. Avec son dessin de quand il avait 5 ans.</p>
+        <div class="placeholder-img" style="aspect-ratio:16/9;margin:24px 0;">
+          <span class="emoji">&#x1FAB5;</span>
+          <span class="label">L'atelier du papy, les premi&egrave;res pi&egrave;ces</span>
+        </div>
+      </div>
+
+      <!-- Toitures -->
+      <div class="section-block">
+        <h3>Les toitures aimant&eacute;es</h3>
+        <p>On a appliqu&eacute; le mod&egrave;le Lego au jardin.</p>
+        <p>Les toitures se clipsent par aimants en 3 secondes. Toit chalet pour l'hiver. Toit japonais pour le printemps. Toit chaumi&egrave;re pour l'automne.</p>
+        <p>Chaque saison, une nouvelle occasion de renouveler la niche. Et chaque nouvelle toiture, une excuse pour retourner dans le jardin avec les enfants.</p>
+      </div>
+
+      <!-- Pourquoi Ulule -->
+      <div class="section-block">
+        <h3>Pourquoi Ulule&nbsp;?</h3>
+        <p>On ne part pas de z&eacute;ro. Le prototype existe. L'atelier est &eacute;quip&eacute;. L'&eacute;quipe est en place. Le configurateur web fonctionne.</p>
+        <p>Ce qu'il nous manque&nbsp;: <strong>15&nbsp;000&nbsp;&euro;</strong> pour financer les 250 premiers kits, le packaging premium qui prot&egrave;ge le bois pendant l'exp&eacute;dition, et la premi&egrave;re collection de toitures saisonni&egrave;res sp&eacute;ciale No&euml;l.</p>
+        <p>On a choisi Ulule parce qu'on croit au financement participatif pour les projets qui ont du sens. Pas de gros investisseur. Pas de plateforme froide. Juste des familles qui croient au projet et qui veulent le premier kit.</p>
+      </div>
+
+      <hr>
+
+      <!-- Financement accordion -->
+      <div class="accordion">
+        <input type="checkbox" id="acc-funding" checked>
+        <label for="acc-funding">
+          &Agrave; quoi servira le financement
+          <svg class="chevron" viewBox="0 0 32 20"><path d="M28.97.53c.69-.7 1.82-.7 2.51 0 .7.7.7 1.84 0 2.55l-14.22 14.4c-.7.7-1.82.7-2.51 0L.53 3.08c-.7-.7-.7-1.84 0-2.55.69-.7 1.82-.7 2.51 0L16 13.65 28.97.53z"/></svg>
+        </label>
+        <div class="accordion-content">
+          <p>Soyons transparents&nbsp;:</p>
+          <p><strong>Les mat&eacute;riaux</strong> &mdash; Bois de peuplier fran&ccedil;ais, aimants, huile de lin. On ne prend pas du MDF chinois. Le bois a un co&ucirc;t, mais c'est ce qui fait la diff&eacute;rence.</p>
+          <p><strong>La gravure laser</strong> &mdash; Chaque planche est grav&eacute;e individuellement avec le dessin unique de chaque enfant. C'est du sur-mesure, pas de la s&eacute;rie.</p>
+          <p><strong>Le packaging</strong> &mdash; Un nichoir en bois, &ccedil;a se prot&egrave;ge. On d&eacute;veloppe un emballage premium qui fait aussi partie de l'exp&eacute;rience d'ouverture.</p>
+          <p><strong>La collection No&euml;l</strong> &mdash; Les premi&egrave;res toitures saisonni&egrave;res, avec des designs sp&eacute;ciaux.</p>
+          <p><strong>Ulule</strong> &mdash; Notre partenaire prend un pourcentage, c'est logique et l&eacute;gitime.</p>
+          <p><strong>L'exp&eacute;dition</strong> &mdash; Envoyer du bois par la poste, c'est un sport. On optimise pour que tout arrive intact.</p>
+        </div>
+      </div>
+
+      <!-- Equipe accordion -->
+      <div class="accordion">
+        <input type="checkbox" id="acc-team">
+        <label for="acc-team">
+          Qui porte la collecte
+          <svg class="chevron" viewBox="0 0 32 20"><path d="M28.97.53c.69-.7 1.82-.7 2.51 0 .7.7.7 1.84 0 2.55l-14.22 14.4c-.7.7-1.82.7-2.51 0L.53 3.08c-.7-.7-.7-1.84 0-2.55.69-.7 1.82-.7 2.51 0L16 13.65 28.97.53z"/></svg>
+        </label>
+        <div class="accordion-content">
+          <div class="team-grid">
+            <div class="team-member">
+              <div class="avatar">&#x1F474;</div>
+              <div class="info">
+                <h4>Le Papy</h4>
+                <p>Artisan bois depuis 40 ans. C'est lui qui a eu l'id&eacute;e, c'est lui qui fabrique. Il sent le bois, la colle et le caf&eacute; du matin. L'&acirc;me et les mains du projet.</p>
+              </div>
+            </div>
+            <div class="team-member">
+              <div class="avatar">&#x1F4BB;</div>
+              <div class="info">
+                <h4>Lucas</h4>
+                <p>D&eacute;veloppeur web. C'est lui qui a construit le configurateur qui transforme le dessin de ton enfant en gravure. L'exp&eacute;rience digitale, c'est son truc.</p>
+              </div>
+            </div>
+            <div class="team-member">
+              <div class="avatar">&#x1F527;</div>
+              <div class="info">
+                <h4>Antoine</h4>
+                <p>Le bras droit op&eacute;rationnel. Logistique, packaging, production &mdash; c'est lui qui s'assure que chaque box arrive chez toi en parfait &eacute;tat.</p>
+              </div>
+            </div>
+            <div class="team-member">
+              <div class="avatar">&#x1F4DE;</div>
+              <div class="info">
+                <h4>Valentin</h4>
+                <p>Commercial et distribution. R&eacute;seau solide, partenariats B2B. Il ouvre les portes pour que Papy Oiseaux arrive dans les bonnes boutiques.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="section-block" style="margin-top:32px;">
+        <h2 class="section-title">FAQ</h2>
+        <div class="faq-item">
+          <input type="checkbox" id="faq1">
+          <label for="faq1">
+            Comment envoyer le dessin de mon enfant&nbsp;?
+            <svg class="chevron" viewBox="0 0 32 20"><path d="M28.97.53c.69-.7 1.82-.7 2.51 0 .7.7.7 1.84 0 2.55l-14.22 14.4c-.7.7-1.82.7-2.51 0L.53 3.08c-.7-.7-.7-1.84 0-2.55.69-.7 1.82-.7 2.51 0L16 13.65 28.97.53z"/></svg>
+          </label>
+          <div class="faq-answer">
+            <p>Apr&egrave;s ta contribution, tu re&ccedil;ois un lien vers notre configurateur en ligne. Tu uploades une photo du dessin &mdash; peu importe la qualit&eacute;, on s'occupe du reste. Tu vois le rendu en temps r&eacute;el avant validation.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <input type="checkbox" id="faq2">
+          <label for="faq2">
+            Le kit est adapt&eacute; &agrave; quel &acirc;ge&nbsp;?
+            <svg class="chevron" viewBox="0 0 32 20"><path d="M28.97.53c.69-.7 1.82-.7 2.51 0 .7.7.7 1.84 0 2.55l-14.22 14.4c-.7.7-1.82.7-2.51 0L.53 3.08c-.7-.7-.7-1.84 0-2.55.69-.7 1.82-.7 2.51 0L16 13.65 28.97.53z"/></svg>
+          </label>
+          <div class="faq-answer">
+            <p>D&egrave;s 4 ans avec un adulte. L'assemblage fonctionne par embo&icirc;tement, sans colle ni outil. C'est con&ccedil;u pour &ecirc;tre simple et s&ucirc;r &mdash; le but, c'est de passer un bon moment ensemble, pas de se battre avec une notice.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <input type="checkbox" id="faq3">
+          <label for="faq3">
+            Le nichoir tient-il en ext&eacute;rieur&nbsp;?
+            <svg class="chevron" viewBox="0 0 32 20"><path d="M28.97.53c.69-.7 1.82-.7 2.51 0 .7.7.7 1.84 0 2.55l-14.22 14.4c-.7.7-1.82.7-2.51 0L.53 3.08c-.7-.7-.7-1.84 0-2.55.69-.7 1.82-.7 2.51 0L16 13.65 28.97.53z"/></svg>
+          </label>
+          <div class="faq-answer">
+            <p>Oui. Contreplaqu&eacute; peuplier trait&eacute; &agrave; l'huile de lin naturelle. Con&ccedil;u pour rester dehors toute l'ann&eacute;e, pluie ou soleil. Et oui, les oiseaux l'adoptent vraiment &mdash; on a test&eacute;.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Presse -->
+      <div class="section-block">
+        <blockquote class="citation" style="font-size:0.95rem;border-left-color:var(--ulule-orange);">
+          <p>&laquo;&nbsp;Un projet qui allie &eacute;motion, nature et artisanat fran&ccedil;ais comme on en voit rarement sur les plateformes de financement participatif.&nbsp;&raquo;</p>
+          <p style="color:rgba(255,255,255,0.5);font-style:normal;font-family:var(--font-sans);font-size:0.8rem;">&mdash; Placeholder presse &agrave; remplacer</p>
+        </blockquote>
+      </div>
+
+      <!-- Social -->
+      <div class="social-section">
+        <h3>Suivez la collecte ailleurs</h3>
+        <div class="social-links">
+          <a href="#" class="social-link">
+            <div class="social-icon" style="background:#1a1208;">&#x1F426;</div>
+            Rendez-vous sur notre site
+          </a>
+          <a href="#" class="social-link">
+            <div class="social-icon" style="background:#f30074;">&#x1F4F7;</div>
+            Suivez-nous sur Instagram
+          </a>
+        </div>
+      </div>
+
+    </div><!-- /section-collecte -->
+
+    <!-- TAB: News -->
+    <div id="section-news" class="tab-content">
+      <h2 class="section-title">Actualit&eacute;s</h2>
+      <div class="news-item">
+        <div class="news-header">
+          <div class="news-avatar">&#x1F474;</div>
+          <div>
+            <div class="news-title">&#x1F426; 60% atteints &mdash; merci&nbsp;!</div>
+            <div class="news-meta">Par Le Papy &middot; il y a 3 jours</div>
+          </div>
+        </div>
+        <div class="news-body">
+          <p>En moins de 3 semaines, 187 d'entre vous ont cru au projet. Je suis dans mon atelier en ce moment, j'assemble les premiers prototypes pour v&eacute;rifier que tout est nickel avant la production.</p>
+          <p>Les premiers kits seront pr&ecirc;ts bien avant les d&eacute;lais pr&eacute;vus. Je vous tiens au courant avec des photos de l'atelier tr&egrave;s bient&ocirc;t.</p>
+          <p>Merci du fond du c&oelig;ur. Chaque contribution, c'est un nichoir de plus dans un jardin, et un souvenir de plus dans une famille.</p>
+        </div>
+      </div>
+      <div class="news-item">
+        <div class="news-header">
+          <div class="news-avatar">&#x1F4BB;</div>
+          <div>
+            <div class="news-title">&#x1F527; Le configurateur est en ligne</div>
+            <div class="news-meta">Par Lucas &middot; il y a 12 jours</div>
+          </div>
+        </div>
+        <div class="news-body">
+          <p>Grosse nouvelle&nbsp;: vous pouvez maintenant tester le configurateur sur notre site. Uploadez une photo du dessin de votre enfant et voyez-le s'appliquer en temps r&eacute;el sur la niche avec la simulation gravure bois.</p>
+          <p>C'est encore en b&ecirc;ta, mais &ccedil;a marche. Et franchement, la premi&egrave;re fois qu'on voit le gribouillis de sa fille de 4 ans appara&icirc;tre grav&eacute; dans le bois&hellip; &ccedil;a fait quelque chose.</p>
+        </div>
+      </div>
+    </div><!-- /section-news -->
+
+    <!-- TAB: Contributions -->
+    <div id="section-contributions" class="tab-content">
+      <h2 class="section-title">Derni&egrave;res contributions</h2>
+      <div class="contribution-item">
+        <div class="contrib-avatar">&#x1F469;</div>
+        <div class="contrib-info">
+          <div class="contrib-name">Marie D.</div>
+          <div class="contrib-reward">a choisi <a href="#">Box Essentielle</a></div>
+        </div>
+        <div class="contrib-time">il y a 8 min</div>
+      </div>
+      <div class="contribution-item">
+        <div class="contrib-avatar">&#x1F468;</div>
+        <div class="contrib-info">
+          <div class="contrib-name">Thomas L.</div>
+          <div class="contrib-reward">a choisi <a href="#">Coffret Collector</a></div>
+        </div>
+        <div class="contrib-time">il y a 23 min</div>
+      </div>
+      <div class="contribution-item">
+        <div class="contrib-avatar">&#x1F475;</div>
+        <div class="contrib-info">
+          <div class="contrib-name">Fran&ccedil;oise M.</div>
+          <div class="contrib-reward">a choisi <a href="#">Box D&eacute;couverte</a></div>
+        </div>
+        <div class="contrib-time">il y a 1 heure</div>
+      </div>
+      <div class="contribution-item">
+        <div class="contrib-avatar">&#x1F466;</div>
+        <div class="contrib-info">
+          <div class="contrib-name">Julien R.</div>
+          <div class="contrib-reward">a choisi <a href="#">Box Essentielle</a></div>
+        </div>
+        <div class="contrib-time">il y a 2 heures</div>
+      </div>
+      <div class="contribution-item">
+        <div class="contrib-avatar">&#x1F469;</div>
+        <div class="contrib-info">
+          <div class="contrib-name">Camille B.</div>
+          <div class="contrib-reward">a choisi <a href="#">Kit D&eacute;couverte</a></div>
+        </div>
+        <div class="contrib-time">il y a 3 heures</div>
+      </div>
+    </div><!-- /section-contributions -->
+
+    <!-- TAB: FAQ (scrolls to same section) -->
+    <div id="section-faq" class="tab-content">
+      <!-- FAQ is already in collecte section, this tab just scrolls there -->
+    </div>
+
+    <!-- TAB: Rewards (scrolls to sidebar) -->
+    <div id="section-rewards" class="tab-content">
+      <!-- Rewards are in sidebar -->
+    </div>
+
+  </div><!-- /content-left -->
+
+  <!-- ============ SIDEBAR REWARDS ============ -->
+  <aside class="content-sidebar">
+    <div class="sidebar-sticky">
+      <div class="rewards-header">
+        <h2>Contreparties</h2>
+        <p>Soutenez la collecte et recevez des contreparties en &eacute;change.</p>
+      </div>
+
+      <!-- Palier 1 -->
+      <div class="reward-card">
+        <div class="reward-price">Pour 5&nbsp;&euro;</div>
+        <div class="reward-title">Soutien symbolique</div>
+        <div class="reward-desc">Tu crois au projet et tu veux nous encourager. Ton nom appara&icirc;tra dans les remerciements officiels et tu auras acc&egrave;s &agrave; toutes les actualit&eacute;s en avant-premi&egrave;re.</div>
+        <button class="reward-cta">Choisir</button>
+        <div class="reward-footer">
+          <span><svg viewBox="0 0 32 32"><path d="M21 0c.83 0 1.5.65 1.5 1.45V2.91l3 0c2.49 0 4.5 1.95 4.5 4.36v20.36C30 30.05 27.99 32 25.5 32h-21C2.01 32 0 30.05 0 27.64V7.27c0-2.41 2.01-4.36 4.5-4.36l3 0V1.45C7.5.7 8.09.08 8.86.01L9 0c.83 0 1.5.65 1.5 1.45V2.91h9V1.45c0-.76.59-1.38 1.36-1.45z"/></svg> Num&eacute;rique</span>
+          <span><svg viewBox="0 0 32 32"><path d="M29.3 4.68a9.31 9.31 0 00-13 0l0 0L16 4.9l-.24-.22a9.34 9.34 0 00-13.07 0 9 9 0 000 12.87L14.8 29.51A1.63 1.63 0 0016 30a1.78 1.78 0 001.21-.49L29.3 17.57A9.06 9.06 0 0029.3 4.68Z"/></svg> 23 contributions</span>
+        </div>
+      </div>
+
+      <!-- Palier 2 -->
+      <div class="reward-card">
+        <div class="reward-price">Pour 25&nbsp;&euro;</div>
+        <div class="reward-title">Kit D&eacute;couverte</div>
+        <div class="reward-desc">3 pins oiseaux &agrave; collectionner, des autocollants Papy Oiseaux, et une carte sign&eacute;e &agrave; la main par le papy. Le d&eacute;but de l'aventure.</div>
+        <button class="reward-cta">Choisir</button>
+        <div class="reward-footer">
+          <span><svg viewBox="0 0 32 32"><path d="M21 0c.83 0 1.5.65 1.5 1.45V2.91l3 0c2.49 0 4.5 1.95 4.5 4.36v20.36C30 30.05 27.99 32 25.5 32h-21C2.01 32 0 30.05 0 27.64V7.27c0-2.41 2.01-4.36 4.5-4.36l3 0V1.45C7.5.7 8.09.08 8.86.01L9 0c.83 0 1.5.65 1.5 1.45V2.91h9V1.45c0-.76.59-1.38 1.36-1.45z"/></svg> Mars 2026</span>
+          <span><svg viewBox="0 0 32 32"><path d="M29.3 4.68a9.31 9.31 0 00-13 0l0 0L16 4.9l-.24-.22a9.34 9.34 0 00-13.07 0 9 9 0 000 12.87L14.8 29.51A1.63 1.63 0 0016 30a1.78 1.78 0 001.21-.49L29.3 17.57A9.06 9.06 0 0029.3 4.68Z"/></svg> 41 contributions</span>
+        </div>
+      </div>
+
+      <!-- Palier 3 -->
+      <div class="reward-card">
+        <div class="reward-price">Pour 59&nbsp;&euro;</div>
+        <div class="reward-title">Box Essentielle</div>
+        <span class="reward-popular">&#x2B50; POPULAIRE</span>
+        <div class="reward-desc">Le c&oelig;ur du projet. Kit nichoir complet en bois + planche grav&eacute;e au laser avec LE dessin de ton enfant + toiture aimant&eacute;e + pins + autocollants + notice illustr&eacute;e.</div>
+        <button class="reward-cta">Choisir</button>
+        <div class="reward-footer">
+          <span><svg viewBox="0 0 32 32"><path d="M21 0c.83 0 1.5.65 1.5 1.45V2.91l3 0c2.49 0 4.5 1.95 4.5 4.36v20.36C30 30.05 27.99 32 25.5 32h-21C2.01 32 0 30.05 0 27.64V7.27c0-2.41 2.01-4.36 4.5-4.36l3 0V1.45C7.5.7 8.09.08 8.86.01L9 0c.83 0 1.5.65 1.5 1.45V2.91h9V1.45c0-.76.59-1.38 1.36-1.45z"/></svg> Avril 2026</span>
+          <span><svg viewBox="0 0 32 32"><path d="M29.3 4.68a9.31 9.31 0 00-13 0l0 0L16 4.9l-.24-.22a9.34 9.34 0 00-13.07 0 9 9 0 000 12.87L14.8 29.51A1.63 1.63 0 0016 30a1.78 1.78 0 001.21-.49L29.3 17.57A9.06 9.06 0 0029.3 4.68Z"/></svg> 98 contributions</span>
+        </div>
+      </div>
+
+      <!-- Palier 4 -->
+      <div class="reward-card">
+        <div class="reward-price">Pour 75&nbsp;&euro;</div>
+        <div class="reward-title">Box D&eacute;couverte</div>
+        <div class="reward-desc">Tout le contenu de la Box Essentielle + le livre d&eacute;couverte illustr&eacute; (34 esp&egrave;ces d'oiseaux &agrave; reconna&icirc;tre dans ton jardin) + livraison offerte.</div>
+        <button class="reward-cta">Choisir</button>
+        <div class="reward-footer">
+          <span><svg viewBox="0 0 32 32"><path d="M21 0c.83 0 1.5.65 1.5 1.45V2.91l3 0c2.49 0 4.5 1.95 4.5 4.36v20.36C30 30.05 27.99 32 25.5 32h-21C2.01 32 0 30.05 0 27.64V7.27c0-2.41 2.01-4.36 4.5-4.36l3 0V1.45C7.5.7 8.09.08 8.86.01L9 0c.83 0 1.5.65 1.5 1.45V2.91h9V1.45c0-.76.59-1.38 1.36-1.45z"/></svg> Avril 2026</span>
+          <span><svg viewBox="0 0 32 32"><path d="M29.3 4.68a9.31 9.31 0 00-13 0l0 0L16 4.9l-.24-.22a9.34 9.34 0 00-13.07 0 9 9 0 000 12.87L14.8 29.51A1.63 1.63 0 0016 30a1.78 1.78 0 001.21-.49L29.3 17.57A9.06 9.06 0 0029.3 4.68Z"/></svg> 19 contributions</span>
+        </div>
+      </div>
+
+      <!-- Palier 5 -->
+      <div class="reward-card">
+        <div class="reward-price">Pour 95&nbsp;&euro;</div>
+        <div class="reward-title">Coffret Collector &Eacute;dition Ulule</div>
+        <span class="reward-limited">Limit&eacute; &mdash; 6/50</span>
+        <div class="reward-desc">La totale. Box D&eacute;couverte + 2 toitures suppl&eacute;mentaires au choix + emballage cadeau premium + num&eacute;ro de s&eacute;rie grav&eacute; + signature du papy. Livraison offerte.</div>
+        <button class="reward-cta">Choisir</button>
+        <div class="reward-footer">
+          <span><svg viewBox="0 0 32 32"><path d="M21 0c.83 0 1.5.65 1.5 1.45V2.91l3 0c2.49 0 4.5 1.95 4.5 4.36v20.36C30 30.05 27.99 32 25.5 32h-21C2.01 32 0 30.05 0 27.64V7.27c0-2.41 2.01-4.36 4.5-4.36l3 0V1.45C7.5.7 8.09.08 8.86.01L9 0c.83 0 1.5.65 1.5 1.45V2.91h9V1.45c0-.76.59-1.38 1.36-1.45z"/></svg> Mai 2026</span>
+          <span><svg viewBox="0 0 32 32"><path d="M29.3 4.68a9.31 9.31 0 00-13 0l0 0L16 4.9l-.24-.22a9.34 9.34 0 00-13.07 0 9 9 0 000 12.87L14.8 29.51A1.63 1.63 0 0016 30a1.78 1.78 0 001.21-.49L29.3 17.57A9.06 9.06 0 0029.3 4.68Z"/></svg> 6 contributions</span>
+        </div>
+      </div>
+
+      <!-- Donation -->
+      <div class="donation-box">
+        <h3>Faire un don</h3>
+        <div class="donation-form">
+          <input type="text" class="donation-input" placeholder="5, 10, 25, 50&hellip;">
+          <button class="donation-btn">Donner</button>
+        </div>
+      </div>
+
+      <!-- Delivery -->
+      <div class="delivery-info">
+        <h4>Livraison</h4>
+        <p>Date estim&eacute;e&nbsp;: &agrave; partir d'avril 2026</p>
+        <p>Exp&eacute;dition&nbsp;: France, Europe</p>
+      </div>
+
+    </div><!-- /sidebar-sticky -->
+  </aside>
+</div><!-- /content-main -->
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="how-it-works">
+  <div class="container">
+    <h2>Comment fonctionne ce crowdfunding&nbsp;?</h2>
+    <div class="how-grid">
+      <div class="how-item">
+        <div class="icon-circle">&#x2708;&#xFE0F;</div>
+        <h3>Donnez des ailes &agrave; ce projet</h3>
+        <p>Ulule permet aux cr&eacute;ateurs de financer leurs projets gr&acirc;ce au crowdfunding. En contribuant, vous les aidez &agrave; les r&eacute;aliser&nbsp;!</p>
+      </div>
+      <div class="how-item">
+        <div class="icon-circle">&#x2696;&#xFE0F;</div>
+        <h3>Tout ou rien</h3>
+        <p>La collecte doit atteindre 100% de son objectif pour r&eacute;cup&eacute;rer les fonds. L'id&eacute;e est de donner le maximum de chances au projet.</p>
+      </div>
+      <div class="how-item">
+        <div class="icon-circle">&#x1F512;</div>
+        <h3>S&eacute;curis&eacute; et sans engagement</h3>
+        <p>Paiements s&eacute;curis&eacute;s, aucune info bancaire stock&eacute;e. Annulation et remboursement possibles &agrave; tout moment.</p>
+      </div>
+    </div>
+    <button class="how-cta cta-contribute" id="cta-bottom">Contribuer</button>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>Ulule Crowdfunding</h4>
+      <ul>
+        <li><a href="#">Lancer une collecte</a></li>
+        <li><a href="#">Voir toutes les collectes</a></li>
+        <li><a href="#">Appels &agrave; projets</a></li>
+        <li><a href="#">Foire aux questions</a></li>
+        <li><a href="#">Statistiques</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Ulule Formation</h4>
+      <ul>
+        <li><a href="#">Formation entrepreneuriat</a></li>
+        <li><a href="#">Formation crowdfunding</a></li>
+        <li><a href="#">Formation marketing digital</a></li>
+        <li><a href="#">Bilan de comp&eacute;tences</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Communaut&eacute;</h4>
+      <ul>
+        <li><a href="#">Prochains lives</a></li>
+        <li><a href="#">Bons plans</a></li>
+        <li><a href="#">Conseils &amp; entraide</a></li>
+        <li><a href="#">Groupes th&eacute;matiques</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>&Agrave; propos d'Ulule</h4>
+      <ul>
+        <li><a href="#">D&eacute;couvrir Ulule</a></li>
+        <li><a href="#">Nous contacter</a></li>
+        <li><a href="#">Devenir partenaire</a></li>
+        <li><a href="#">&Eacute;quipe</a></li>
+        <li><a href="#">Presse</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-logo">ulule</span>
+    <div class="footer-social">
+      <a href="#" title="Facebook">f</a>
+      <a href="#" title="Instagram">ig</a>
+      <a href="#" title="LinkedIn">in</a>
+      <a href="#" title="YouTube">yt</a>
+      <a href="#" title="TikTok">tk</a>
+    </div>
+    <div class="footer-legal">
+      <a href="#">Conditions d'utilisation</a>
+      <a href="#">Cookies</a>
+      <a href="#">Confidentialit&eacute;</a>
+    </div>
+  </div>
+  <div class="footer-disclaimer">
+    &#x26A0;&#xFE0F; Ceci est une maquette de travail non officielle. Aucun paiement r&eacute;el. Projet Papy Oiseaux.
+  </div>
+</footer>
+
+<!-- ============ JAVASCRIPT ============ -->
+<script>
+(function() {
+  'use strict';
+
+  // Counter animation
+  function animateCounter(el, target, duration) {
+    var start = performance.now();
+    function format(n) { return n.toLocaleString('fr-FR') + '\u00a0\u20ac'; }
+    function tick(now) {
+      var t = Math.min((now - start) / duration, 1);
+      var ease = 1 - Math.pow(1 - t, 4);
+      el.textContent = format(Math.floor(target * ease));
+      if (t < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  // Progress bar
+  function animateProgress() {
+    setTimeout(function() {
+      var fill = document.querySelector('.progress-fill');
+      if (fill) fill.style.width = '62%';
+    }, 300);
+  }
+
+  // CTA feedback
+  function setupCTA() {
+    document.querySelectorAll('.cta-contribute').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var original = btn.textContent;
+        btn.textContent = '\u2713 Merci ! \uD83D\uDC26';
+        btn.style.background = 'var(--ulule-green-dark)';
+        setTimeout(function() {
+          btn.textContent = original;
+          btn.style.background = '';
+        }, 2000);
+      });
+    });
+  }
+
+  // Tab switching
+  function setupTabs() {
+    var tabs = document.querySelectorAll('.sticky-menu a');
+    tabs.forEach(function(tab) {
+      tab.addEventListener('click', function(e) {
+        var target = tab.getAttribute('data-target');
+
+        // Special tabs that just scroll
+        if (target === 'section-faq' || target === 'section-rewards') {
+          // Make collecte active and show it
+          tabs.forEach(function(t) { t.classList.remove('active'); });
+          tabs[0].classList.add('active');
+          document.querySelectorAll('.tab-content').forEach(function(s) { s.classList.remove('active'); });
+          document.getElementById('section-collecte').classList.add('active');
+          return; // let default scroll behavior work
+        }
+
+        e.preventDefault();
+        tabs.forEach(function(t) { t.classList.remove('active'); });
+        tab.classList.add('active');
+        document.querySelectorAll('.tab-content').forEach(function(s) { s.classList.remove('active'); });
+        var section = document.getElementById(target);
+        if (section) section.classList.add('active');
+      });
+    });
+  }
+
+  // Init
+  document.addEventListener('DOMContentLoaded', function() {
+    var counter = document.getElementById('amount-counter');
+    if (counter) animateCounter(counter, 9240, 1200);
+    animateProgress();
+    setupCTA();
+    setupTabs();
+  });
+})();
+</script>
+
+</body>
+</html>
